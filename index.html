@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventura na Cadeia Alimentar | Ciências 6º Ano</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Tela Inicial -->
+        <section id="start-screen" class="screen active">
+            <header>
+                <div class="logo">🌿</div>
+                <h1>Aventura na<br>Cadeia Alimentar</h1>
+                <p class="subtitle">Ciências • 6º Ano</p>
+            </header>
+            <main>
+                <div class="intro-card">
+                    <p>Olá, pequeno cientista! 🌱</p>
+                    <p>Prepare-se para explorar o mundo dos <strong>seres vivos</strong>, <strong>produtores</strong>, <strong>consumidores</strong> e <strong>decompositores</strong>.</p>
+                    <p>Responda 10 perguntas e mostre o quanto você sabe sobre a natureza!</p>
+                </div>
+                <button id="btn-start" class="btn btn-primary">Começar Aventura 🚀</button>
+            </main>
+            <footer>
+                <p>Jogo educativo • Front-end HTML + CSS + JS</p>
+            </footer>
+        </section>
+
+        <!-- Tela do Jogo -->
+        <section id="game-screen" class="screen">
+            <header class="game-header">
+                <div class="score-box">
+                    <span class="label">Pontos</span>
+                    <span id="score">0</span>
+                </div>
+                <div class="progress-box">
+                    <span id="question-counter">1 / 10</span>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="question-area">
+                <div class="question-card">
+                    <p id="question-text">Pergunta aparece aqui</p>
+                </div>
+                <div id="options-container" class="options-container">
+                    <!-- Opções geradas via JS -->
+                </div>
+            </main>
+
+            <div id="feedback" class="feedback hidden">
+                <p id="feedback-text"></p>
+                <button id="btn-next" class="btn btn-secondary">Próxima →</button>
+            </div>
+        </section>
+
+        <!-- Tela Final -->
+        <section id="end-screen" class="screen">
+            <header>
+                <div id="end-emoji" class="logo">🏆</div>
+                <h1 id="end-title">Parabéns!</h1>
+            </header>
+            <main>
+                <div class="result-card">
+                    <p class="final-score">Sua pontuação:</p>
+                    <p id="final-score" class="big-score">0 / 10</p>
+                    <p id="end-message" class="end-message"></p>
+                </div>
+                <button id="btn-restart" class="btn btn-primary">Jogar Novamente 🔄</button>
+            </main>
+            <footer>
+                <p>Continue explorando a ciência! 🌍</p>
+            </footer>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
